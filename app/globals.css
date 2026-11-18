@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Fonts */
+  --font-primary: var(--font-poppins), sans-serif;
+  --font-heading: var(--font-poppins), sans-serif;
+
+  /* Luxury Event Theme Palette (Extracted from Celestia design screenshot) */
+  /* Main Backgrounds */
+  --color-bg-main: #fdf4ef;        /* Warm luxury peach-cream (AboutUs, Testimonials, alternating) */
+  --color-bg-card: #ffffff;        /* Pure card white / clean section white */
+  --color-bg-light: #ffffff;       /* Pure white section background (Services, etc.) */
+  --color-bg-alt: #fdf4ef;         /* Warm luxury tone */
+  --color-bg-subtle: #fbf7f1;
+  --color-bg-section: #ffffff;
+
+  /* Primary Brand: Deep Terracotta / Rust Luxury Wine */
+  --color-primary: #8b3a2b;        /* Signature deep terracotta red */
+  --color-primary-dark: #6e2c20;
+  --color-primary-darker: #531f16;
+  --color-primary-hover: #9c4333;
+  --color-primary-active: #4a1c14;
+  --color-primary-alt: #8b3a2b;
+  --color-primary-accent: #a94f3e;
+  --color-primary-bright: #c86956;
+  --color-primary-light: #fbeee9;
+
+  /* Accent: Warm Gold / Champagne / Bronze */
+  --color-accent: #c59b6d;         /* Elegant warm gold/bronze */
+  --color-accent-light: #d6af84;
+  --color-accent-lighter: #e8cbb0;
+  --color-accent-sky: #d6af84;
+  --color-accent-soft: #fbf4ec;
+  --color-accent-cyan: #c59b6d;
+  --color-accent-glow: #c59b6d;
+  --color-accent-pastel: #f9f1e8;
+
+  /* Headings */
+  --color-heading: #2c1a16;        /* Deep rich espresso brown for luxury headings */
+  --color-navy-deep: #2c1a16;
+  --color-navy-dark: #2c1a16;
+  --color-navy-darker: #2c1a16;
+  --color-navy-night: #2c1a16;
+  --color-navy-overlay: #fffcf8;
+  --color-navy-medium: #4a342f;
+  --color-navy-rich: #2c1a16;
+  --color-navy-midnight: #6e2c20;
+  --color-navy-light: #8b3a2b;
+  --color-navy-teal: #2c1a16;
+
+  /* Body and Muted Text */
+  --color-text: #594742;           /* Warm soft dark charcoal/brown text */
+  --color-text-light: #8c7771;     /* Muted secondary text */
+  --color-text-muted: #8c7771;
+  --color-text-slate: #594742;
+  --color-text-steel: #8c7771;
+  --color-text-subtle: #b3a29d;
+  --color-text-gray: #8c7771;
+  --color-text-breadcrumb: #8c7771;
+  --color-text-dim: #b3a29d;
+  --color-text-cool: #594742;
+  --color-text-deep-muted: #8c7771;
+  --color-text-light-muted: #eaddd7;
+
+  /* Borders and Dividers */
+  --color-border: #ebdcd4;        /* Soft warm champagne/rose border */
+  --color-border-soft: #f5ede8;
+  --color-border-card: #ebdcd4;
+  --color-border-light: #f0e4dc;
+  --color-border-subtle: #f8f3ef;
+  --color-border-alt: #ebdcd4;
+  --color-border-cool: #e0cec5;
+  --color-border-accent: #c59b6d;
+  --color-border-muted: #ebdcd4;
+  --color-border-faint: #faf6f2;
+
+  /* Overlays and Shadows */
+  --color-shadow-soft: rgba(44, 26, 22, 0.04);
+  --color-shadow: rgba(44, 26, 22, 0.08);
+  --color-shadow-strong: rgba(139, 58, 43, 0.16);
+
+  /* Status Colors */
+  --color-warning: #d97706;
+  --color-success-bg: #f0fdf4;
+  --color-success-border: #16a34a;
+  --color-success-text: #15803d;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg-main);
+}

@@ -1,0 +1,412 @@
+{
+  "common": {
+    "Footer": {
+      "logo": "/main logo/logo.webp",
+      "logoAlt": "Celestiq Event Management Logo",
+      "logoUrl": "/",
+      "brandTitle": "Celestiq Event Management",
+      "copyrightText": "© 2026 Celestiq Event Management. All Rights Reserved. Powered By Lestow",
+      "quickLinksTitle": "Quick Links",
+      "contactTitle": "Get in Touch",
+      "followUsTitle": "Follow Us",
+      "quickLinks": [
+        {
+          "id": "quick-home",
+          "label": "Home",
+          "url": "/#hero"
+        },
+        {
+          "id": "quick-about",
+          "label": "About Us",
+          "url": "/#about"
+        },
+        {
+          "id": "quick-services",
+          "label": "Services",
+          "url": "/#services"
+        },
+        {
+          "id": "quick-gallery",
+          "label": "Gallery",
+          "url": "/#gallery"
+        },
+        {
+          "id": "quick-testimonials",
+          "label": "Testimonials",
+          "url": "/#testimonials"
+        },
+        {
+          "id": "quick-faqs",
+          "label": "FAQs",
+          "url": "/#faqs"
+        },
+        {
+          "id": "quick-contact",
+          "label": "Contact Us",
+          "url": "/#contact"
+        }
+      ],
+      "contactInfo": {
+        "address": "123 Main St, New York, NY, USA",
+        "phone": "+1 000000000",
+        "email": "info@xyz.com"
+      },
+      "socialLinks": [
+        {
+          "id": "social-facebook",
+          "icon": "FaFacebookF",
+          "label": "Facebook",
+          "url": "https://facebook.com"
+        },
+        {
+          "id": "social-instagram",
+          "icon": "FaInstagram",
+          "label": "Instagram",
+          "url": "https://instagram.com"
+        },
+        {
+          "id": "social-linkedin",
+          "icon": "FaLinkedinIn",
+          "label": "LinkedIn",
+          "url": "https://linkedin.com"
+        },
+        {
+          "id": "social-youtube",
+          "icon": "FaYoutube",
+          "label": "YouTube",
+          "url": "https://youtube.com"
+        }
+      ]
+    }
+  },
+  "categories": {
+    "EventManagement": {
+      "sections": {
+        "Header": {
+          "variants": {
+            "EventManagementHeader2": {
+              "logo": "/main logo/logo.webp",
+              "logoAlt": "Celestiq Event Management Logo",
+              "navLinks": [
+                {
+                  "id": "nav-home",
+                  "label": "Home",
+                  "url": "/#hero"
+                },
+                {
+                  "id": "nav-about",
+                  "label": "About Us",
+                  "url": "/#about"
+                },
+                {
+                  "id": "nav-services",
+                  "label": "Our Services",
+                  "url": "/#services"
+                },
+                {
+                  "id": "nav-gallery",
+                  "label": "Gallery",
+                  "url": "/#gallery"
+                },
+                {
+                  "id": "nav-testimonials",
+                  "label": "Testimonials",
+                  "url": "/#testimonials"
+                },
+                {
+                  "id": "nav-faqs",
+                  "label": "FAQs",
+                  "url": "/#faqs"
+                }
+              ],
+              "contactButton": {
+                "text": "Contact Us",
+                "url": "/#contact"
+              },
+              "openMenuLabel": "Open navigation menu",
+              "closeMenuLabel": "Close navigation menu"
+            }
+          }
+        },
+        "Hero": {
+          "variants": {
+            "EventManagementHero2": {
+              "eyebrow": "MEMORABLE EVENTS",
+              "titleStart": "Beautiful Celebrations",
+              "titleEnd": "Perfectly Planned",
+              "taglineItems": [
+                {
+                  "id": "tag-weddings",
+                  "label": "Weddings"
+                },
+                {
+                  "id": "tag-birthdays",
+                  "label": "Birthdays"
+                },
+                {
+                  "id": "tag-corporate",
+                  "label": "Corporate Events"
+                },
+                {
+                  "id": "tag-private",
+                  "label": "Private Parties"
+                }
+              ],
+              "bgImage": "/hero/hero-bg.webp",
+              "bgImageAlt": "Outdoor luxury wedding celebration beautifully planned under scenic hills and sunset"
+            }
+          }
+        },
+        "AboutUs": {
+          "variants": {
+            "EventManagementAboutUs2": {
+              "eyebrow": "ABOUT US",
+              "titleStart": "Creating Memorable",
+              "titleEnd": "Experiences",
+              "descriptionParagraph1": "At CELESTIQ, we bring your special moments to life with creativity, precision, and a personal touch.",
+              "descriptionParagraph2": "From intimate celebrations to grand events, our passion is to plan, design, and manage experiences that are seamless, stylish, and truly unforgettable.",
+              "imageMain": "/about/about-main.webp",
+              "imageMainAlt": "Outdoor romantic dinner table setting with floral canopy and hanging lanterns",
+              "imageDetail": "/about/about-detail.webp",
+              "imageDetailAlt": "Elegantly folded terracotta napkin with baby's breath on dinnerware with gold silverware"
+            }
+          }
+        },
+        "Services": {
+          "variants": {
+            "EventManagementServices2": {
+              "eyebrow": "OUR SERVICES",
+              "title": "Events for Every Occasion",
+              "description": "From intimate gatherings to grand celebrations, we offer end-to-end event planning and management tailored to your vision.",
+              "services": [
+                {
+                  "id": "service-weddings",
+                  "title": "Weddings",
+                  "category": "TIMELESS CELEBRATIONS",
+                  "description": "From venue to décor, we create magical wedding experiences that last a lifetime.",
+                  "image": "/services/service-weddings.webp",
+                  "imageAlt": "Outdoor romantic wedding arch with floral decor and scenic landscape"
+                },
+                {
+                  "id": "service-birthdays",
+                  "title": "Birthdays",
+                  "category": "JOYFUL MOMENTS",
+                  "description": "Themed, stylish, and perfectly planned birthday celebrations for all age groups.",
+                  "image": "/services/service-birthdays.webp",
+                  "imageAlt": "Warm birthday celebration backdrop with balloons, cake, and neon sign"
+                },
+                {
+                  "id": "service-corporate",
+                  "title": "Corporate Events",
+                  "category": "PROFESSIONAL & IMPACTFUL",
+                  "description": "Well-organized corporate events that reflect your brand and achieve your business goals.",
+                  "image": "/services/service-corporate.webp",
+                  "imageAlt": "Modern corporate conference hall with banquet tables and projection screen"
+                },
+                {
+                  "id": "service-private-parties",
+                  "title": "Private Parties",
+                  "category": "EXCLUSIVE GATHERINGS",
+                  "description": "Thoughtfully planned private celebrations for family, friends, and special occasions.",
+                  "image": "/services/service-private-parties.webp",
+                  "imageAlt": "Cozy twilight outdoor private dinner with fairy lights and floral tablescape"
+                }
+              ]
+            }
+          }
+        },
+        "Gallery": {
+          "variants": {
+            "EventManagementGallery2": {
+              "eyebrow": "OUR GALLERY",
+              "title": "Moments from Our Events",
+              "description": "A glimpse of the celebrations we've had the privilege to create.",
+              "items": [
+                {
+                  "id": "gallery-1",
+                  "image": "/gallery/gallery-1.webp",
+                  "imageAlt": "Magical wedding ceremony floral canopy aisle with sunset mountain backdrop"
+                },
+                {
+                  "id": "gallery-2",
+                  "image": "/gallery/gallery-2.webp",
+                  "imageAlt": "Elegant wedding banquet tablescape with rose centerpieces and wine glasses"
+                },
+                {
+                  "id": "gallery-3",
+                  "image": "/gallery/gallery-3.webp",
+                  "imageAlt": "Warm modern birthday party balloon arch with birthday cake and neon sign"
+                },
+                {
+                  "id": "gallery-4",
+                  "image": "/gallery/gallery-4.webp",
+                  "imageAlt": "Grand corporate event ballroom with crystal chandeliers and round banquet seating"
+                },
+                {
+                  "id": "gallery-5",
+                  "image": "/gallery/gallery-5.webp",
+                  "imageAlt": "Luxury dining table arrangement with candle lanterns, gold cutlery, and floral vases"
+                }
+              ]
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "EventManagementTestimonials2": {
+              "eyebrow": "TESTIMONIALS",
+              "title": "What Our Clients Say",
+              "autoplayDelay": 5000,
+              "testimonials": [
+                {
+                  "id": "testimonial-priya-sharma",
+                  "name": "Priya Sharma",
+                  "role": "BRIDE",
+                  "quote": "The team made our wedding day absolutely perfect! From planning to execution, everything was seamless, elegant, and beyond our expectations.",
+                  "avatar": "/testimonials/priya-sharma.webp",
+                  "avatarAlt": "Smiling bride Priya Sharma in elegant wedding attire"
+                },
+                {
+                  "id": "testimonial-rohit-mehta",
+                  "name": "Rohit Mehta",
+                  "role": "CORPORATE CLIENT",
+                  "quote": "CELESTIQ organized our annual corporate gala flawlessly. The lighting, ballroom decor, and stage setup reflected our brand with immense sophistication.",
+                  "avatar": "/testimonials/client-4.webp",
+                  "avatarAlt": "Corporate client Rohit Mehta"
+                },
+                {
+                  "id": "testimonial-ananya-verma",
+                  "name": "Ananya Verma",
+                  "role": "BIRTHDAY HOST",
+                  "quote": "The 30th birthday setup was breathtaking! The balloon arch, photo corners, and floral arrangements made the evening truly memorable for our guests.",
+                  "avatar": "/testimonials/client-3.webp",
+                  "avatarAlt": "Birthday host Ananya Verma"
+                },
+                {
+                  "id": "testimonial-kavita-sen",
+                  "name": "Kavita Sen",
+                  "role": "PRIVATE PARTY HOST",
+                  "quote": "From our first meeting to the last candle lit, their attention to detail and personal touch turned our anniversary dinner into pure magic.",
+                  "avatar": "/testimonials/client-2.webp",
+                  "avatarAlt": "Private party host Kavita Sen"
+                }
+              ]
+            }
+          }
+        },
+        "Faq": {
+          "variants": {
+            "EventManagementFaq2": {
+              "eyebrow": "FAQS",
+              "titleStart": "Frequently",
+              "titleEnd": "Asked Questions",
+              "description": "Have questions about our services, venues, or planning process? Find quick answers to the most common queries below.",
+              "image": "/faq/faq-decor.webp",
+              "imageAlt": "Golden lattice candle lamps with delicate white floral arrangements on tabletop",
+              "items": [
+                {
+                  "id": "faq-1",
+                  "question": "What types of events do you organize?",
+                  "answer": "We organize a wide range of events including weddings, birthdays, corporate events, private parties, and other special celebrations, tailored to your needs and vision."
+                },
+                {
+                  "id": "faq-2",
+                  "question": "Do you provide venue selection assistance?",
+                  "answer": "Yes, we help you find and book the perfect venue that matches your guest count, aesthetic preferences, and budget."
+                },
+                {
+                  "id": "faq-3",
+                  "question": "Can you handle end-to-end event planning?",
+                  "answer": "Absolutely. From concept and theme design to vendor management, catering, lighting, and on-day coordination, we handle everything."
+                },
+                {
+                  "id": "faq-4",
+                  "question": "Do you work with a specific budget?",
+                  "answer": "We work with a variety of budgets and customize our services and vendor selections to deliver the highest quality experience within your range."
+                },
+                {
+                  "id": "faq-5",
+                  "question": "How early should we book your services?",
+                  "answer": "We recommend reaching out 3 to 6 months in advance for weddings and major corporate galas, and at least 3 to 4 weeks for birthdays and private dinners."
+                },
+                {
+                  "id": "faq-6",
+                  "question": "Can you customize the event theme and décor?",
+                  "answer": "Yes, every celebration is custom-tailored. Our design team creates personalized mood boards, floral palettes, and bespoke decor suited to your unique story."
+                }
+              ]
+            }
+          }
+        },
+        "Contact": {
+          "variants": {
+            "EventManagementContact2": {
+              "eyebrow": "CONTACT US",
+              "title": "Get in Touch with Us",
+              "description": "Have an event in mind? Send us a message and we'll be happy to assist you.",
+              "namePlaceholder": "Your Name",
+              "emailPlaceholder": "Your Email",
+              "messagePlaceholder": "Your Message...",
+              "submitButtonText": "SEND MESSAGE",
+              "cornerTopLeftImage": "/contact/corner-top-left.webp",
+              "cornerBottomRightImage": "/contact/corner-bottom-right.webp"
+            }
+          }
+        }
+      },
+      "templateComponents": {
+        "shared": {
+          "Header": "EventManagementHeader2",
+          "Footer": "EventManagementFooter2"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "Hero",
+                "component": "Hero"
+              },
+              {
+                "key": "AboutUs",
+                "component": "AboutUs"
+              },
+              {
+                "key": "Services",
+                "component": "Services"
+              },
+              {
+                "key": "Gallery",
+                "component": "Gallery"
+              },
+              {
+                "key": "Testimonials",
+                "component": "Testimonials"
+              },
+              {
+                "key": "Contact",
+                "component": "Contact"
+              },
+              {
+                "key": "Faq",
+                "component": "Faq"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "components": [
+        "Hero",
+        "AboutUs",
+        "Services",
+        "Gallery",
+        "Testimonials",
+        "Contact",
+        "Faq"
+      ]
+    }
+  }
+}
