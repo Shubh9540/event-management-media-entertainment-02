@@ -1,5 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 import { ServicesProps } from '@/types/templates.types';
+import { FaArrowRight } from 'react-icons/fa';
 
 export const Services = ({ data }: ServicesProps) => {
   if (!data) return null;
@@ -83,9 +85,20 @@ export const Services = ({ data }: ServicesProps) => {
               </p>
 
               {/* Body Paragraph */}
-              <p className="text-sm font-normal leading-[1.65] text-[var(--color-text)] sm:text-[15px] lg:text-[15.5px]">
+              <p className="mb-4 text-sm font-normal leading-[1.65] text-[var(--color-text)] sm:text-[15px] lg:text-[15.5px]">
                 {service.description}
               </p>
+
+              {/* Read More Button leading to Enquiry / Contact section */}
+              <div className="mt-auto pt-1">
+                <Link
+                  href={data.readMoreUrl || '/#contact'}
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider text-[var(--color-primary)] uppercase transition-colors hover:text-[var(--color-primary-dark)] group"
+                >
+                  <span>{data.readMoreButtonText || 'Read More'}</span>
+                  <FaArrowRight className="text-[10px] transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
             </div>
           ))}
         </div>

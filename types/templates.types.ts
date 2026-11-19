@@ -66,6 +66,8 @@ export interface ServicesData {
   eyebrow: string;
   title: string;
   description: string;
+  readMoreButtonText?: string;
+  readMoreUrl?: string;
   services: ServiceItem[];
 }
 

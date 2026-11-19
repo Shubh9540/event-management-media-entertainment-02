@@ -7,7 +7,7 @@ export const Hero = ({ data }: HeroProps) => {
   return (
     <section
       id="hero"
-      className="relative flex w-full items-start justify-center overflow-hidden bg-[var(--color-bg-alt)] bg-cover bg-center pt-8 pb-20 sm:pt-10 sm:pb-28 lg:min-h-[480px] lg:pt-12 lg:pb-36"
+      className="relative flex w-full items-start justify-center overflow-hidden bg-[var(--color-bg-alt)] bg-cover bg-bottom sm:bg-center pt-8 pb-36 sm:pt-10 sm:pb-40 lg:min-h-[480px] lg:pt-12 lg:pb-36"
       style={{ backgroundImage: `url('${data.bgImage}')` }}
     >
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 lg:px-8">

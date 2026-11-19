@@ -36,8 +36,8 @@ export const Footer = ({ data }: FooterProps) => {
 
   return (
     <footer className="relative w-full overflow-hidden bg-[var(--color-bg-card)] pt-10 pb-8 lg:pt-12 lg:pb-8">
-      {/* Top-Left Corner User-Provided Lotus Flower Watermark */}
-      <div className="pointer-events-none absolute left-0 top-0 z-0 h-36 w-28 sm:h-48 sm:w-40 lg:h-56 lg:w-48 max-w-[30vw]">
+      {/* Top-Left Corner User-Provided Lotus Flower Watermark - Hidden on small mobile to prevent text collision */}
+      <div className="pointer-events-none absolute left-0 top-0 z-0 hidden sm:block sm:h-44 sm:w-36 lg:h-56 lg:w-48 max-w-[25vw] opacity-40 sm:opacity-75 lg:opacity-100">
         <img
           src="/contact/footer-top-left.webp"
           alt=""
@@ -46,8 +46,8 @@ export const Footer = ({ data }: FooterProps) => {
         />
       </div>
 
-      {/* Bottom-Right Corner User-Provided Lotus Flower Watermark */}
-      <div className="pointer-events-none absolute bottom-0 right-0 z-0 h-36 w-28 sm:h-48 sm:w-40 lg:h-56 lg:w-48 max-w-[30vw]">
+      {/* Bottom-Right Corner User-Provided Lotus Flower Watermark - Hidden on small mobile to prevent text collision */}
+      <div className="pointer-events-none absolute bottom-0 right-0 z-0 hidden sm:block sm:h-44 sm:w-36 lg:h-56 lg:w-48 max-w-[25vw] opacity-40 sm:opacity-75 lg:opacity-100">
         <img
           src="/contact/footer-bottom-right.webp"
           alt=""

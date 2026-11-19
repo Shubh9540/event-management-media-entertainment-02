@@ -25,9 +25,9 @@ export const Contact = ({ data }: ContactProps) => {
 
   return (
     <section id="contact" className="relative w-full overflow-hidden bg-[var(--color-bg-card)] py-8 lg:py-14">
-      {/* Top-Left Corner User-Provided Lotus Flower Line Artwork */}
+      {/* Top-Left Corner User-Provided Lotus Flower Line Artwork - Hidden on very small screens to prevent text overlap */}
       {data.cornerTopLeftImage && (
-        <div className="pointer-events-none absolute left-0 top-0 z-0 h-36 w-28 sm:h-48 sm:w-40 lg:h-56 lg:w-48 max-w-[30vw]">
+        <div className="pointer-events-none absolute left-0 top-0 z-0 hidden sm:block sm:h-44 sm:w-36 lg:h-56 lg:w-48 max-w-[25vw] opacity-40 sm:opacity-75 lg:opacity-100">
           <img
             src={data.cornerTopLeftImage}
             alt=""
@@ -37,9 +37,9 @@ export const Contact = ({ data }: ContactProps) => {
         </div>
       )}
 
-      {/* Bottom-Right Corner User-Provided Lotus Flower Line Artwork */}
+      {/* Bottom-Right Corner User-Provided Lotus Flower Line Artwork - Hidden on very small screens to prevent text overlap */}
       {data.cornerBottomRightImage && (
-        <div className="pointer-events-none absolute bottom-0 right-0 z-0 h-36 w-28 sm:h-48 sm:w-40 lg:h-56 lg:w-48 max-w-[30vw]">
+        <div className="pointer-events-none absolute bottom-0 right-0 z-0 hidden sm:block sm:h-44 sm:w-36 lg:h-56 lg:w-48 max-w-[25vw] opacity-40 sm:opacity-75 lg:opacity-100">
           <img
             src={data.cornerBottomRightImage}
             alt=""

@@ -1,14 +1,51 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import { GalleryProps } from '@/types/templates.types';
+import { FaTimes, FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 
 export const Gallery = ({ data }: GalleryProps) => {
-  if (!data) return null;
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const item1 = data.items[0];
-  const item2 = data.items[1];
-  const item3 = data.items[2];
-  const item4 = data.items[3];
-  const item5 = data.items[4];
+  if (!data || !data.items || data.items.length === 0) return null;
+
+  const items = data.items;
+  const item1 = items[0];
+  const item2 = items[1];
+  const item3 = items[2];
+  const item4 = items[3];
+  const item5 = items[4];
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (lightboxIndex !== null) {
+      setLightboxIndex((prev) => (prev === 0 ? items.length - 1 : (prev as number) - 1));
+    }
+  };
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (lightboxIndex !== null) {
+      setLightboxIndex((prev) => (prev === items.length - 1 ? 0 : (prev as number) + 1));
+    }
+  };
+
+  // Keyboard navigation for Lightbox
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (lightboxIndex === null) return;
+      if (e.key === 'Escape') setLightboxIndex(null);
+      if (e.key === 'ArrowLeft') {
+        setLightboxIndex((prev) => (prev === 0 ? items.length - 1 : (prev as number) - 1));
+      }
+      if (e.key === 'ArrowRight') {
+        setLightboxIndex((prev) => (prev === items.length - 1 ? 0 : (prev as number) + 1));
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightboxIndex, items.length]);
 
   return (
     <section id="gallery" className="w-full bg-[var(--color-bg-card)] py-8 lg:py-14">
@@ -63,33 +100,63 @@ export const Gallery = ({ data }: GalleryProps) => {
         <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-12 lg:gap-4">
           {/* Col 1: Left tall wedding arch photo - exact span 4.2 */}
           {item1 && (
-            <div className="group relative h-[380px] overflow-hidden rounded-xl bg-[var(--color-bg-alt)] shadow-sm sm:col-span-2 sm:h-[450px] lg:col-span-4 lg:h-[500px]">
+            <div
+              onClick={() => setLightboxIndex(0)}
+              className="group relative h-[380px] cursor-pointer overflow-hidden rounded-xl bg-[var(--color-bg-alt)] shadow-sm sm:col-span-2 sm:h-[450px] lg:col-span-4 lg:h-[500px]"
+            >
               <img
                 src={item1.image}
                 alt={item1.imageAlt}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                <span className="rounded-full bg-white/80 p-3 text-[var(--color-primary)] shadow-md">
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                  </svg>
+                </span>
+              </div>
             </div>
           )}
 
           {/* Col 2: Middle Column (2 stacked equal height photos) */}
           <div className="flex flex-col gap-3.5 sm:col-span-1 lg:col-span-4 lg:h-[500px] lg:gap-4">
             {item2 && (
-              <div className="group relative h-[240px] overflow-hidden rounded-xl bg-[var(--color-bg-alt)] shadow-sm lg:h-[242px]">
+              <div
+                onClick={() => setLightboxIndex(1)}
+                className="group relative h-[240px] cursor-pointer overflow-hidden rounded-xl bg-[var(--color-bg-alt)] shadow-sm lg:h-[242px]"
+              >
                 <img
                   src={item2.image}
                   alt={item2.imageAlt}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                  <span className="rounded-full bg-white/80 p-2.5 text-[var(--color-primary)] shadow-md">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             )}
             {item3 && (
-              <div className="group relative h-[240px] overflow-hidden rounded-xl bg-[var(--color-bg-alt)] shadow-sm lg:h-[242px]">
+              <div
+                onClick={() => setLightboxIndex(2)}
+                className="group relative h-[240px] cursor-pointer overflow-hidden rounded-xl bg-[var(--color-bg-alt)] shadow-sm lg:h-[242px]"
+              >
                 <img
                   src={item3.image}
                   alt={item3.imageAlt}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                  <span className="rounded-full bg-white/80 p-2.5 text-[var(--color-primary)] shadow-md">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             )}
           </div>
@@ -97,26 +164,103 @@ export const Gallery = ({ data }: GalleryProps) => {
           {/* Col 3: Right Column (2 stacked equal height photos) */}
           <div className="flex flex-col gap-3.5 sm:col-span-1 lg:col-span-4 lg:h-[500px] lg:gap-4">
             {item4 && (
-              <div className="group relative h-[240px] overflow-hidden rounded-xl bg-[var(--color-bg-alt)] shadow-sm lg:h-[242px]">
+              <div
+                onClick={() => setLightboxIndex(3)}
+                className="group relative h-[240px] cursor-pointer overflow-hidden rounded-xl bg-[var(--color-bg-alt)] shadow-sm lg:h-[242px]"
+              >
                 <img
                   src={item4.image}
                   alt={item4.imageAlt}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                  <span className="rounded-full bg-white/80 p-2.5 text-[var(--color-primary)] shadow-md">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             )}
             {item5 && (
-              <div className="group relative h-[240px] overflow-hidden rounded-xl bg-[var(--color-bg-alt)] shadow-sm lg:h-[242px]">
+              <div
+                onClick={() => setLightboxIndex(4)}
+                className="group relative h-[240px] cursor-pointer overflow-hidden rounded-xl bg-[var(--color-bg-alt)] shadow-sm lg:h-[242px]"
+              >
                 <img
                   src={item5.image}
                   alt={item5.imageAlt}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                  <span className="rounded-full bg-white/80 p-2.5 text-[var(--color-primary)] shadow-md">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             )}
           </div>
         </div>
       </div>
+
+      {/* Lightbox Modal with Next and Previous Controls */}
+      {lightboxIndex !== null && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setLightboxIndex(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm animate-fadeIn"
+        >
+          {/* Close button */}
+          <button
+            type="button"
+            onClick={() => setLightboxIndex(null)}
+            className="absolute top-5 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/25"
+            aria-label="Close image popup"
+          >
+            <FaTimes className="text-xl" />
+          </button>
+
+          {/* Previous Arrow Button */}
+          <button
+            type="button"
+            onClick={handlePrev}
+            className="absolute left-3 sm:left-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-white shadow-lg transition-all hover:bg-white/30 hover:scale-105"
+            aria-label="Previous image"
+          >
+            <FaAngleLeft className="text-2xl" />
+          </button>
+
+          {/* Image Container */}
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-h-[85vh] max-w-[90vw] overflow-hidden rounded-lg shadow-2xl flex flex-col items-center"
+          >
+            <img
+              src={items[lightboxIndex].image}
+              alt={items[lightboxIndex].imageAlt}
+              className="max-h-[80vh] w-auto max-w-full rounded-md object-contain"
+            />
+            {items[lightboxIndex].imageAlt && (
+              <p className="mt-3 text-center text-sm text-neutral-300">
+                {items[lightboxIndex].imageAlt}
+              </p>
+            )}
+          </div>
+
+          {/* Next Arrow Button */}
+          <button
+            type="button"
+            onClick={handleNext}
+            className="absolute right-3 sm:right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-white shadow-lg transition-all hover:bg-white/30 hover:scale-105"
+            aria-label="Next image"
+          >
+            <FaAngleRight className="text-2xl" />
+          </button>
+        </div>
+      )}
     </section>
   );
 };

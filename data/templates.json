@@ -178,6 +178,8 @@
               "eyebrow": "OUR SERVICES",
               "title": "Events for Every Occasion",
               "description": "From intimate gatherings to grand celebrations, we offer end-to-end event planning and management tailored to your vision.",
+              "readMoreButtonText": "Read More",
+              "readMoreUrl": "/#contact",
               "services": [
                 {
                   "id": "service-weddings",
