@@ -11,15 +11,15 @@ export const Gallery = ({ data }: GalleryProps) => {
   const item5 = data.items[4];
 
   return (
-    <section id="gallery" className="w-full bg-[#ffffff] py-14 lg:py-24">
+    <section id="gallery" className="w-full bg-[var(--color-bg-card)] py-8 lg:py-14">
       <div className="mx-auto w-full max-w-[1280px] px-4 lg:px-8">
         {/* Section Header: Matching Services Section Style Exactly */}
-        <div className="mb-14 flex flex-col items-center text-center lg:mb-18">
+        <div className="mb-8 flex flex-col items-center text-center lg:mb-10">
           {/* Lotus Ornament with Side Lines */}
           <div className="mb-1.5 flex items-center justify-center gap-4 sm:gap-6">
-            <span className="h-[1.5px] w-24 bg-[#c59b6d] sm:w-36 lg:w-44" />
+            <span className="h-[1.5px] w-24 bg-[var(--color-accent)] sm:w-36 lg:w-44" />
             <svg
-              className="h-12 w-12 text-[#8b3a2b] sm:h-14 sm:w-14"
+              className="h-12 w-12 text-[var(--color-primary)] sm:h-14 sm:w-14"
               viewBox="0 0 32 32"
               fill="none"
               stroke="currentColor"
@@ -40,21 +40,21 @@ export const Gallery = ({ data }: GalleryProps) => {
               {/* Curved base line */}
               <path d="M13 21C14.5 21.8 17.5 21.8 19 21" strokeWidth="1.6" />
             </svg>
-            <span className="h-[1.5px] w-24 bg-[#c59b6d] sm:w-36 lg:w-44" />
+            <span className="h-[1.5px] w-24 bg-[var(--color-accent)] sm:w-36 lg:w-44" />
           </div>
 
           {/* Eyebrow: Close to icon, regular weight, big size */}
-          <p className="mb-3 text-base font-normal tracking-[0.38em] text-[#2c1a16] uppercase sm:text-lg lg:text-[20px]">
+          <p className="mb-3 text-base font-normal tracking-[0.38em] text-[var(--color-heading)] uppercase sm:text-lg lg:text-[20px]">
             {data.eyebrow}
           </p>
 
           {/* Main Title */}
-          <h2 className="mb-4 font-serif text-4xl font-normal leading-tight text-[#8b3a2b] sm:text-5xl lg:text-[58px] xl:text-[62px]">
+          <h2 className="mb-4 font-serif text-4xl font-normal leading-tight text-[var(--color-primary)] sm:text-5xl lg:text-[58px] xl:text-[62px]">
             {data.title}
           </h2>
 
           {/* Subtext description */}
-          <p className="max-w-3xl text-base leading-relaxed text-[#594742] sm:text-lg lg:text-[18px]">
+          <p className="max-w-3xl text-base leading-relaxed text-[var(--color-text)] sm:text-lg lg:text-[18px]">
             {data.description}
           </p>
         </div>

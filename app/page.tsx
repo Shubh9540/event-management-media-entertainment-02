@@ -17,7 +17,7 @@ export default function Home() {
   if (!sectionData) return null;
 
   return (
-    <main className="bg-[var(--color-bg-main)] min-h-screen flex flex-col scroll-smooth">
+    <main className="bg-[var(--color-bg-main)] min-h-screen w-full overflow-x-hidden flex flex-col scroll-smooth">
       <Hero data={sectionData.Hero?.variants?.EventManagementHero2} />
       <AboutUs data={sectionData.AboutUs?.variants?.EventManagementAboutUs2} />
       <Services data={sectionData.Services?.variants?.EventManagementServices2} />

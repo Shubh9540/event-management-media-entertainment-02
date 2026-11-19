@@ -5,15 +5,15 @@ export const Services = ({ data }: ServicesProps) => {
   if (!data) return null;
 
   return (
-    <section id="services" className="w-full bg-[#ffffff] py-14 lg:py-24">
+    <section id="services" className="w-full bg-[var(--color-bg-card)] py-8 lg:py-14">
       <div className="mx-auto w-full max-w-[1280px] px-4 lg:px-8">
         {/* Section Header: Tight gap between Ornament & Eyebrow */}
-        <div className="mb-14 flex flex-col items-center text-center lg:mb-18">
+        <div className="mb-8 flex flex-col items-center text-center lg:mb-10">
           {/* Lotus Ornament with Side Lines */}
           <div className="mb-1.5 flex items-center justify-center gap-4 sm:gap-6">
-            <span className="h-[1.5px] w-24 bg-[#c59b6d] sm:w-36 lg:w-44" />
+            <span className="h-[1.5px] w-24 bg-[var(--color-accent)] sm:w-36 lg:w-44" />
             <svg
-              className="h-12 w-12 text-[#8b3a2b] sm:h-14 sm:w-14"
+              className="h-12 w-12 text-[var(--color-primary)] sm:h-14 sm:w-14"
               viewBox="0 0 32 32"
               fill="none"
               stroke="currentColor"
@@ -34,21 +34,21 @@ export const Services = ({ data }: ServicesProps) => {
               {/* Curved base line */}
               <path d="M13 21C14.5 21.8 17.5 21.8 19 21" strokeWidth="1.6" />
             </svg>
-            <span className="h-[1.5px] w-24 bg-[#c59b6d] sm:w-36 lg:w-44" />
+            <span className="h-[1.5px] w-24 bg-[var(--color-accent)] sm:w-36 lg:w-44" />
           </div>
 
           {/* Eyebrow: Close to icon, regular weight, big size */}
-          <p className="mb-3 text-base font-normal tracking-[0.38em] text-[#2c1a16] uppercase sm:text-lg lg:text-[20px]">
+          <p className="mb-3 text-base font-normal tracking-[0.38em] text-[var(--color-heading)] uppercase sm:text-lg lg:text-[20px]">
             {data.eyebrow}
           </p>
 
           {/* Main Title */}
-          <h2 className="mb-4 font-serif text-4xl font-normal leading-tight text-[#8b3a2b] sm:text-5xl lg:text-[58px] xl:text-[62px]">
+          <h2 className="mb-4 font-serif text-4xl font-normal leading-tight text-[var(--color-primary)] sm:text-5xl lg:text-[58px] xl:text-[62px]">
             {data.title}
           </h2>
 
           {/* Subtext description */}
-          <p className="max-w-3xl text-base leading-relaxed text-[#594742] sm:text-lg lg:text-[18px]">
+          <p className="max-w-3xl text-base leading-relaxed text-[var(--color-text)] sm:text-lg lg:text-[18px]">
             {data.description}
           </p>
         </div>
@@ -70,20 +70,20 @@ export const Services = ({ data }: ServicesProps) => {
               </div>
 
               {/* Service Title */}
-              <h3 className="font-serif text-3xl font-medium tracking-tight text-[#8b3a2b] sm:text-[32px] lg:text-[34px]">
+              <h3 className="font-serif text-3xl font-medium tracking-tight text-[var(--color-primary)] sm:text-[32px] lg:text-[34px]">
                 {service.title}
               </h3>
 
               {/* Terracotta / Gold Horizontal Divider Line */}
-              <div className="mx-auto my-3.5 h-[2px] w-full max-w-[200px] bg-[#c59b6d]/80" />
+              <div className="mx-auto my-3.5 h-[2px] w-full max-w-[200px] bg-[var(--color-accent)]/80" />
 
               {/* Sub-label: Timeless Celebrations */}
-              <p className="mb-3 text-xs font-bold tracking-[0.26em] text-[#2c1a16] uppercase sm:text-[13px]">
+              <p className="mb-3 text-xs font-bold tracking-[0.26em] text-[var(--color-heading)] uppercase sm:text-[13px]">
                 {service.category}
               </p>
 
               {/* Body Paragraph */}
-              <p className="text-sm font-normal leading-[1.65] text-[#2c1a16] sm:text-[15px] lg:text-[15.5px]">
+              <p className="text-sm font-normal leading-[1.65] text-[var(--color-text)] sm:text-[15px] lg:text-[15.5px]">
                 {service.description}
               </p>
             </div>

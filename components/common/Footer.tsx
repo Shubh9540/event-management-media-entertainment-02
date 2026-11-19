@@ -35,9 +35,9 @@ export const Footer = ({ data }: FooterProps) => {
   const col2Links = data.quickLinks.slice(4);    // Testimonials, FAQs, Contact Us
 
   return (
-    <footer className="relative w-full overflow-hidden bg-[#ffffff] pt-14 pb-10">
+    <footer className="relative w-full overflow-hidden bg-[var(--color-bg-card)] pt-10 pb-8 lg:pt-12 lg:pb-8">
       {/* Top-Left Corner User-Provided Lotus Flower Watermark */}
-      <div className="pointer-events-none absolute left-0 top-0 z-0 h-44 w-36 sm:h-56 sm:w-48 lg:h-64 lg:w-56">
+      <div className="pointer-events-none absolute left-0 top-0 z-0 h-36 w-28 sm:h-48 sm:w-40 lg:h-56 lg:w-48 max-w-[30vw]">
         <img
           src="/contact/footer-top-left.webp"
           alt=""
@@ -47,7 +47,7 @@ export const Footer = ({ data }: FooterProps) => {
       </div>
 
       {/* Bottom-Right Corner User-Provided Lotus Flower Watermark */}
-      <div className="pointer-events-none absolute bottom-0 right-0 z-0 h-44 w-36 sm:h-56 sm:w-48 lg:h-64 lg:w-56">
+      <div className="pointer-events-none absolute bottom-0 right-0 z-0 h-36 w-28 sm:h-48 sm:w-40 lg:h-56 lg:w-48 max-w-[30vw]">
         <img
           src="/contact/footer-bottom-right.webp"
           alt=""
@@ -71,12 +71,12 @@ export const Footer = ({ data }: FooterProps) => {
           </div>
 
           {/* Column 2: Quick Links (with vertical left border on desktop) */}
-          <div className="lg:border-l lg:border-[#ebdcd4] lg:pl-8">
-            <h3 className="mb-2 font-serif text-xl font-medium text-[#2c1a16]">
+          <div className="lg:border-l lg:border-[var(--color-border)] lg:pl-8">
+            <h3 className="mb-2 font-serif text-xl font-medium text-[var(--color-heading)]">
               {data.quickLinksTitle}
             </h3>
             {/* Terracotta/Gold underline */}
-            <div className="mb-5 h-[2px] w-10 bg-[#c59b6d]" />
+            <div className="mb-5 h-[2px] w-10 bg-[var(--color-accent)]" />
 
             <div className="grid grid-cols-2 gap-x-3 gap-y-2.5 text-sm">
               {/* Sub-col 1 */}
@@ -85,9 +85,9 @@ export const Footer = ({ data }: FooterProps) => {
                   <Link
                     key={link.id}
                     href={link.url}
-                    className="flex items-center gap-1.5 text-sm text-[#2c1a16] transition-colors hover:text-[#8b3a2b]"
+                    className="flex items-center gap-1.5 text-sm text-[var(--color-heading)] transition-colors hover:text-[var(--color-primary)]"
                   >
-                    <FaAngleRight className="text-[11px] text-[#c59b6d]" />
+                    <FaAngleRight className="text-[11px] text-[var(--color-accent)]" />
                     <span>{link.label}</span>
                   </Link>
                 ))}
@@ -99,9 +99,9 @@ export const Footer = ({ data }: FooterProps) => {
                   <Link
                     key={link.id}
                     href={link.url}
-                    className="flex items-center gap-1.5 text-sm text-[#2c1a16] transition-colors hover:text-[#8b3a2b]"
+                    className="flex items-center gap-1.5 text-sm text-[var(--color-heading)] transition-colors hover:text-[var(--color-primary)]"
                   >
-                    <FaAngleRight className="text-[11px] text-[#c59b6d]" />
+                    <FaAngleRight className="text-[11px] text-[var(--color-accent)]" />
                     <span>{link.label}</span>
                   </Link>
                 ))}
@@ -110,25 +110,25 @@ export const Footer = ({ data }: FooterProps) => {
           </div>
 
           {/* Column 3: Get in Touch (with vertical left border on desktop) */}
-          <div className="lg:border-l lg:border-[#ebdcd4] lg:pl-8">
-            <h3 className="mb-2 font-serif text-xl font-medium text-[#2c1a16]">
+          <div className="lg:border-l lg:border-[var(--color-border)] lg:pl-8">
+            <h3 className="mb-2 font-serif text-xl font-medium text-[var(--color-heading)]">
               {data.contactTitle}
             </h3>
-            <div className="mb-5 h-[2px] w-10 bg-[#c59b6d]" />
+            <div className="mb-5 h-[2px] w-10 bg-[var(--color-accent)]" />
 
-            <div className="flex flex-col space-y-3.5 text-sm text-[#2c1a16]">
+            <div className="flex flex-col space-y-3.5 text-sm text-[var(--color-heading)]">
               {/* Address */}
               <div className="flex items-center gap-3">
-                <FaMapMarkerAlt className="shrink-0 text-base text-[#c59b6d]" />
+                <FaMapMarkerAlt className="shrink-0 text-base text-[var(--color-accent)]" />
                 <span className="leading-snug">{data.contactInfo.address}</span>
               </div>
 
               {/* Phone */}
               <div className="flex items-center gap-3">
-                <FaPhoneAlt className="shrink-0 text-sm text-[#c59b6d]" />
+                <FaPhoneAlt className="shrink-0 text-sm text-[var(--color-accent)]" />
                 <a
                   href={`tel:${data.contactInfo.phone}`}
-                  className="transition-colors hover:text-[#8b3a2b]"
+                  className="transition-colors hover:text-[var(--color-primary)]"
                 >
                   {data.contactInfo.phone}
                 </a>
@@ -136,10 +136,10 @@ export const Footer = ({ data }: FooterProps) => {
 
               {/* Email */}
               <div className="flex items-center gap-3">
-                <FaEnvelope className="shrink-0 text-sm text-[#c59b6d]" />
+                <FaEnvelope className="shrink-0 text-sm text-[var(--color-accent)]" />
                 <a
                   href={`mailto:${data.contactInfo.email}`}
-                  className="break-all transition-colors hover:text-[#8b3a2b]"
+                  className="break-all transition-colors hover:text-[var(--color-primary)]"
                 >
                   {data.contactInfo.email}
                 </a>
@@ -148,11 +148,11 @@ export const Footer = ({ data }: FooterProps) => {
           </div>
 
           {/* Column 4: Follow Us (with vertical left border on desktop) */}
-          <div className="lg:border-l lg:border-[#ebdcd4] lg:pl-8">
-            <h3 className="mb-2 font-serif text-xl font-medium text-[#2c1a16]">
+          <div className="lg:border-l lg:border-[var(--color-border)] lg:pl-8">
+            <h3 className="mb-2 font-serif text-xl font-medium text-[var(--color-heading)]">
               {data.followUsTitle}
             </h3>
-            <div className="mb-5 h-[2px] w-10 bg-[#c59b6d]" />
+            <div className="mb-5 h-[2px] w-10 bg-[var(--color-accent)]" />
 
             <div className="flex items-center gap-2.5">
               {data.socialLinks.map((item) => (
@@ -162,7 +162,7 @@ export const Footer = ({ data }: FooterProps) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={item.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[#c59b6d] text-[#c59b6d] transition-all duration-300 hover:border-[#8b3a2b] hover:bg-[#8b3a2b] hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-accent)] text-[var(--color-accent)] transition-all duration-300 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
                 >
                   {renderSocialIcon(item.icon)}
                 </a>
@@ -173,12 +173,12 @@ export const Footer = ({ data }: FooterProps) => {
 
         {/* Bottom Horizontal Divider */}
         <div className="relative mt-12 mb-6 flex items-center justify-center">
-          <div className="h-[1px] w-full bg-[#ebdcd4]" />
+          <div className="h-[1px] w-full bg-[var(--color-border)]" />
         </div>
 
         {/* Bottom Copyright Text */}
         <div className="text-center">
-          <p className="text-sm font-medium text-[#594742]">
+          <p className="text-sm font-medium text-[var(--color-text)]">
             {data.copyrightText}
           </p>
         </div>

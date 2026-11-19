@@ -24,10 +24,10 @@ export const Contact = ({ data }: ContactProps) => {
   };
 
   return (
-    <section id="contact" className="relative w-full overflow-hidden bg-[#ffffff] py-16 lg:py-24">
+    <section id="contact" className="relative w-full overflow-hidden bg-[var(--color-bg-card)] py-8 lg:py-14">
       {/* Top-Left Corner User-Provided Lotus Flower Line Artwork */}
       {data.cornerTopLeftImage && (
-        <div className="pointer-events-none absolute left-0 top-0 z-0 h-44 w-36 sm:h-56 sm:w-48 lg:h-64 lg:w-56">
+        <div className="pointer-events-none absolute left-0 top-0 z-0 h-36 w-28 sm:h-48 sm:w-40 lg:h-56 lg:w-48 max-w-[30vw]">
           <img
             src={data.cornerTopLeftImage}
             alt=""
@@ -39,7 +39,7 @@ export const Contact = ({ data }: ContactProps) => {
 
       {/* Bottom-Right Corner User-Provided Lotus Flower Line Artwork */}
       {data.cornerBottomRightImage && (
-        <div className="pointer-events-none absolute bottom-0 right-0 z-0 h-44 w-36 sm:h-56 sm:w-48 lg:h-64 lg:w-56">
+        <div className="pointer-events-none absolute bottom-0 right-0 z-0 h-36 w-28 sm:h-48 sm:w-40 lg:h-56 lg:w-48 max-w-[30vw]">
           <img
             src={data.cornerBottomRightImage}
             alt=""
@@ -51,12 +51,12 @@ export const Contact = ({ data }: ContactProps) => {
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 lg:px-8">
         {/* Section Header */}
-        <div className="mb-12 flex flex-col items-center text-center lg:mb-16">
+        <div className="mb-8 flex flex-col items-center text-center lg:mb-10">
           {/* Lotus Ornament with Side Lines */}
           <div className="mb-1.5 flex items-center justify-center gap-4 sm:gap-6">
-            <span className="h-[1.5px] w-24 bg-[#c59b6d] sm:w-36 lg:w-44" />
+            <span className="h-[1.5px] w-24 bg-[var(--color-accent)] sm:w-36 lg:w-44" />
             <svg
-              className="h-12 w-12 text-[#8b3a2b] sm:h-14 sm:w-14"
+              className="h-12 w-12 text-[var(--color-primary)] sm:h-14 sm:w-14"
               viewBox="0 0 32 32"
               fill="none"
               stroke="currentColor"
@@ -77,21 +77,21 @@ export const Contact = ({ data }: ContactProps) => {
               {/* Curved base line */}
               <path d="M13 21C14.5 21.8 17.5 21.8 19 21" strokeWidth="1.6" />
             </svg>
-            <span className="h-[1.5px] w-24 bg-[#c59b6d] sm:w-36 lg:w-44" />
+            <span className="h-[1.5px] w-24 bg-[var(--color-accent)] sm:w-36 lg:w-44" />
           </div>
 
           {/* Eyebrow */}
-          <p className="mb-3 text-base font-normal tracking-[0.38em] text-[#2c1a16] uppercase sm:text-lg lg:text-[20px]">
+          <p className="mb-3 text-base font-normal tracking-[0.38em] text-[var(--color-heading)] uppercase sm:text-lg lg:text-[20px]">
             {data.eyebrow}
           </p>
 
           {/* Main Title */}
-          <h2 className="mb-3 font-serif text-4xl font-normal leading-tight text-[#8b3a2b] sm:text-5xl lg:text-[58px] xl:text-[62px]">
+          <h2 className="mb-3 font-serif text-4xl font-normal leading-tight text-[var(--color-primary)] sm:text-5xl lg:text-[58px] xl:text-[62px]">
             {data.title}
           </h2>
 
           {/* Subtitle description */}
-          <p className="max-w-2xl text-base leading-relaxed text-[#594742] sm:text-lg">
+          <p className="max-w-2xl text-base leading-relaxed text-[var(--color-text)] sm:text-lg">
             {data.description}
           </p>
         </div>
@@ -106,7 +106,7 @@ export const Contact = ({ data }: ContactProps) => {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder={data.namePlaceholder}
-                className="w-full rounded-md border border-[#c59b6d]/60 bg-transparent px-4 py-3.5 text-base text-[#2c1a16] placeholder-[#8c7771] outline-none transition-all focus:border-[#8b3a2b] focus:ring-1 focus:ring-[#8b3a2b]"
+                className="w-full rounded-md border border-[var(--color-accent)]/60 bg-transparent px-4 py-3.5 text-base text-[var(--color-heading)] placeholder-[var(--color-text-light)] outline-none transition-all focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)]"
               />
             </div>
 
@@ -117,7 +117,7 @@ export const Contact = ({ data }: ContactProps) => {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder={data.emailPlaceholder}
-                className="w-full rounded-md border border-[#c59b6d]/60 bg-transparent px-4 py-3.5 text-base text-[#2c1a16] placeholder-[#8c7771] outline-none transition-all focus:border-[#8b3a2b] focus:ring-1 focus:ring-[#8b3a2b]"
+                className="w-full rounded-md border border-[var(--color-accent)]/60 bg-transparent px-4 py-3.5 text-base text-[var(--color-heading)] placeholder-[var(--color-text-light)] outline-none transition-all focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)]"
               />
             </div>
 
@@ -128,25 +128,25 @@ export const Contact = ({ data }: ContactProps) => {
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 placeholder={data.messagePlaceholder}
-                className="w-full rounded-md border border-[#c59b6d]/60 bg-transparent px-4 py-3.5 text-base text-[#2c1a16] placeholder-[#8c7771] outline-none transition-all focus:border-[#8b3a2b] focus:ring-1 focus:ring-[#8b3a2b]"
+                className="w-full rounded-md border border-[var(--color-accent)]/60 bg-transparent px-4 py-3.5 text-base text-[var(--color-heading)] placeholder-[var(--color-text-light)] outline-none transition-all focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary)]"
               />
             </div>
 
             <div className="pt-2 flex flex-col items-center">
               <div className="relative inline-block">
-                <span className="absolute -top-1.5 -right-1.5 h-2.5 w-2.5 rotate-45 border border-[#c59b6d] bg-[#c59b6d]" />
-                <span className="absolute -bottom-1.5 -left-1.5 h-2.5 w-2.5 rotate-45 border border-[#c59b6d] bg-[#c59b6d]" />
+                <span className="absolute -top-1.5 -right-1.5 h-2.5 w-2.5 rotate-45 border border-[var(--color-accent)] bg-[var(--color-accent)]" />
+                <span className="absolute -bottom-1.5 -left-1.5 h-2.5 w-2.5 rotate-45 border border-[var(--color-accent)] bg-[var(--color-accent)]" />
 
                 <button
                   type="submit"
-                  className="rounded-none border-2 border-[#c59b6d] bg-transparent px-10 py-3 text-sm font-semibold tracking-[0.2em] text-[#8b3a2b] uppercase transition-all duration-300 hover:bg-[#8b3a2b] hover:border-[#8b3a2b] hover:text-white"
+                  className="rounded-none border-2 border-[var(--color-accent)] bg-transparent px-10 py-3 text-sm font-semibold tracking-[0.2em] text-[var(--color-primary)] uppercase transition-all duration-300 hover:bg-[var(--color-primary)] hover:border-[var(--color-primary)] hover:text-white"
                 >
                   {data.submitButtonText}
                 </button>
               </div>
 
               {submitted && (
-                <p className="mt-4 text-sm font-medium text-[#8b3a2b] animate-fadeIn">
+                <p className="mt-4 text-sm font-medium text-[var(--color-primary)] animate-fadeIn">
                   Thank you! Your message has been sent successfully.
                 </p>
               )}

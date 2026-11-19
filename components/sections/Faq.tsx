@@ -15,17 +15,17 @@ export const Faq = ({ data }: FaqProps) => {
   };
 
   return (
-    <section id="faqs" className="w-full bg-[#ffffff] py-16 lg:py-24">
+    <section id="faqs" className="w-full bg-[var(--color-bg-card)] py-8 lg:py-14">
       <div className="mx-auto w-full max-w-[1280px] px-4 lg:px-8">
         {/* 2-Column Split: Left Sticky Info + Right Smooth Accordion List */}
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-14">
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-12">
           {/* Left Column: Header Info & Candlelit Decor Image */}
-          <div className="flex flex-col items-start lg:col-span-5 lg:sticky lg:top-28">
+          <div className="flex flex-col items-start lg:col-span-5 lg:sticky lg:top-24">
             {/* Lotus Ornament with Side Lines */}
             <div className="mb-3 flex items-center justify-start gap-4">
-              <span className="h-[1.5px] w-14 bg-[#c59b6d] sm:w-20" />
+              <span className="h-[1.5px] w-14 bg-[var(--color-accent)] sm:w-20" />
               <svg
-                className="h-10 w-10 text-[#8b3a2b]"
+                className="h-10 w-10 text-[var(--color-primary)]"
                 viewBox="0 0 32 32"
                 fill="none"
                 stroke="currentColor"
@@ -46,22 +46,22 @@ export const Faq = ({ data }: FaqProps) => {
                 {/* Curved base line */}
                 <path d="M13 21C14.5 21.8 17.5 21.8 19 21" strokeWidth="1.6" />
               </svg>
-              <span className="h-[1.5px] w-14 bg-[#c59b6d] sm:w-20" />
+              <span className="h-[1.5px] w-14 bg-[var(--color-accent)] sm:w-20" />
             </div>
 
             {/* Eyebrow */}
-            <p className="mb-4 text-base font-normal tracking-[0.35em] text-[#2c1a16] uppercase sm:text-lg">
+            <p className="mb-4 text-base font-normal tracking-[0.35em] text-[var(--color-heading)] uppercase sm:text-lg">
               {data.eyebrow}
             </p>
 
             {/* Title: Comfortable line-height & spacing so lines never collide */}
-            <h2 className="mb-5 font-serif text-3xl font-normal leading-[1.3] text-[#8b3a2b] sm:text-4xl sm:leading-[1.28] lg:text-[46px] lg:leading-[1.25] xl:text-[50px]">
+            <h2 className="mb-5 font-serif text-3xl font-normal leading-[1.3] text-[var(--color-primary)] sm:text-4xl sm:leading-[1.28] lg:text-[46px] lg:leading-[1.25] xl:text-[50px]">
               <span className="block">{data.titleStart}</span>
               <span className="block mt-1 sm:mt-1.5">{data.titleEnd}</span>
             </h2>
 
             {/* Description */}
-            <p className="mb-8 max-w-md text-sm leading-relaxed text-[#594742] sm:text-base">
+            <p className="mb-8 max-w-md text-sm leading-relaxed text-[var(--color-text)] sm:text-base">
               {data.description}
             </p>
 
@@ -85,21 +85,19 @@ export const Faq = ({ data }: FaqProps) => {
               return (
                 <div
                   key={item.id}
-                  className={`overflow-hidden rounded-lg border transition-all duration-300 ${
-                    isOpen
-                      ? 'border-[#8b3a2b] bg-[#fdf4ef] shadow-sm'
-                      : 'border-[#c59b6d]/40 bg-white hover:border-[#c59b6d]'
-                  }`}
+                  className={`overflow-hidden rounded-lg border transition-all duration-300 ${isOpen
+                      ? 'border-[var(--color-primary)] bg-[var(--color-bg-main)] shadow-sm'
+                      : 'border-[var(--color-accent)]/40 bg-white hover:border-[var(--color-accent)]'
+                    }`}
                 >
                   {/* Accordion Question Header */}
                   <button
                     type="button"
                     onClick={() => toggleItem(item.id)}
-                    className={`flex w-full items-center justify-between px-5 py-4 text-left transition-colors sm:px-6 sm:py-4.5 ${
-                      isOpen
-                        ? 'bg-[#8b3a2b] text-white'
-                        : 'text-[#2c1a16] hover:text-[#8b3a2b]'
-                    }`}
+                    className={`flex w-full items-center justify-between px-5 py-4 text-left transition-colors sm:px-6 sm:py-4.5 ${isOpen
+                        ? 'bg-[var(--color-primary)] text-white'
+                        : 'text-[var(--color-heading)] hover:text-[var(--color-primary)]'
+                      }`}
                   >
                     <span className="font-serif text-base font-normal sm:text-lg md:text-[19px]">
                       {item.question}
@@ -108,20 +106,19 @@ export const Faq = ({ data }: FaqProps) => {
                       {isOpen ? (
                         <FaMinus className="text-white" />
                       ) : (
-                        <FaPlus className="text-[#c59b6d]" />
+                        <FaPlus className="text-[var(--color-accent)]" />
                       )}
                     </span>
                   </button>
 
                   {/* Accordion Body */}
                   <div
-                    className={`transition-all duration-300 ease-in-out ${
-                      isOpen
+                    className={`transition-all duration-300 ease-in-out ${isOpen
                         ? 'max-h-[300px] opacity-100'
                         : 'max-h-0 opacity-0 overflow-hidden pointer-events-none'
-                    }`}
+                      }`}
                   >
-                    <div className="p-5 text-sm leading-relaxed text-[#594742] sm:p-6 sm:text-base">
+                    <div className="p-5 text-sm leading-relaxed text-[var(--color-text)] sm:p-6 sm:text-base">
                       {item.answer}
                     </div>
                   </div>

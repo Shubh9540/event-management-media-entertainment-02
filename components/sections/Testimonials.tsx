@@ -32,15 +32,15 @@ export const Testimonials = ({ data }: TestimonialsProps) => {
   const activeTestimonial = data.testimonials[currentIndex];
 
   return (
-    <section id="testimonials" className="w-full bg-[#fdf4ef] py-16 lg:py-24">
+    <section id="testimonials" className="w-full overflow-hidden bg-[var(--color-bg-main)] py-8 lg:py-14">
       <div className="mx-auto w-full max-w-[1280px] px-4 lg:px-8">
         {/* Section Header */}
-        <div className="mb-10 flex flex-col items-center text-center lg:mb-14">
+        <div className="mb-6 flex flex-col items-center text-center lg:mb-8">
           {/* Lotus Ornament with Side Lines */}
           <div className="mb-1.5 flex items-center justify-center gap-4 sm:gap-6">
-            <span className="h-[1.5px] w-24 bg-[#c59b6d] sm:w-36 lg:w-44" />
+            <span className="h-[1.5px] w-24 bg-[var(--color-accent)] sm:w-36 lg:w-44" />
             <svg
-              className="h-12 w-12 text-[#8b3a2b] sm:h-14 sm:w-14"
+              className="h-12 w-12 text-[var(--color-primary)] sm:h-14 sm:w-14"
               viewBox="0 0 32 32"
               fill="none"
               stroke="currentColor"
@@ -61,16 +61,16 @@ export const Testimonials = ({ data }: TestimonialsProps) => {
               {/* Curved base line */}
               <path d="M13 21C14.5 21.8 17.5 21.8 19 21" strokeWidth="1.6" />
             </svg>
-            <span className="h-[1.5px] w-24 bg-[#c59b6d] sm:w-36 lg:w-44" />
+            <span className="h-[1.5px] w-24 bg-[var(--color-accent)] sm:w-36 lg:w-44" />
           </div>
 
           {/* Eyebrow */}
-          <p className="mb-3 text-base font-normal tracking-[0.38em] text-[#2c1a16] uppercase sm:text-lg lg:text-[20px]">
+          <p className="mb-3 text-base font-normal tracking-[0.38em] text-[var(--color-heading)] uppercase sm:text-lg lg:text-[20px]">
             {data.eyebrow}
           </p>
 
           {/* Main Title */}
-          <h2 className="font-serif text-4xl font-normal leading-tight text-[#8b3a2b] sm:text-5xl lg:text-[58px] xl:text-[62px]">
+          <h2 className="font-serif text-4xl font-normal leading-tight text-[var(--color-primary)] sm:text-5xl lg:text-[58px] xl:text-[62px]">
             {data.title}
           </h2>
         </div>
@@ -82,21 +82,21 @@ export const Testimonials = ({ data }: TestimonialsProps) => {
             type="button"
             onClick={handlePrev}
             aria-label="Previous testimonial"
-            className="group z-10 flex h-14 w-14 shrink-0 items-center justify-center text-[#c59b6d] transition-all hover:text-[#8b3a2b]"
+            className="group z-10 flex h-11 w-11 shrink-0 items-center justify-center text-[var(--color-accent)] transition-all hover:text-[var(--color-primary)] sm:h-14 sm:w-14"
           >
-            <div className="flex items-center gap-1">
-              <span className="block h-[1.5px] w-8 bg-current transition-all group-hover:w-10" />
-              <FaArrowLeft className="-ml-8 text-sm" />
+            <div className="flex items-center">
+              <span className="hidden h-[1.5px] w-6 bg-current transition-all group-hover:w-8 sm:block" />
+              <FaArrowLeft className="text-sm sm:-ml-6" />
             </div>
           </button>
 
           {/* Center Card with Min-Height and Flex Center */}
-          <div className="flex min-h-[380px] flex-1 flex-col items-center justify-center px-4 text-center sm:min-h-[400px] sm:px-8">
+          <div className="flex min-h-[340px] flex-1 flex-col items-center justify-center px-2 text-center sm:min-h-[380px] sm:px-8">
             {/* Avatar with Ornamental Leaf Sprigs on Sides */}
             <div className="relative mb-4 flex items-center justify-center">
               {/* Left Botanical Branch */}
               <svg
-                className="hidden h-10 w-10 text-[#c59b6d] sm:block -mr-2"
+                className="hidden h-10 w-10 text-[var(--color-accent)] sm:block -mr-2"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -110,7 +110,7 @@ export const Testimonials = ({ data }: TestimonialsProps) => {
               </svg>
 
               {/* Circular Avatar */}
-              <div className="h-24 w-24 overflow-hidden rounded-full border-2 border-[#c59b6d] bg-white p-0.5 shadow-sm sm:h-28 sm:w-28">
+              <div className="h-24 w-24 overflow-hidden rounded-full border-2 border-[var(--color-accent)] bg-white p-0.5 shadow-sm sm:h-28 sm:w-28">
                 <img
                   src={activeTestimonial.avatar}
                   alt={activeTestimonial.avatarAlt}
@@ -120,7 +120,7 @@ export const Testimonials = ({ data }: TestimonialsProps) => {
 
               {/* Right Botanical Branch */}
               <svg
-                className="hidden h-10 w-10 text-[#c59b6d] sm:block -ml-2 scale-x-[-1]"
+                className="hidden h-10 w-10 text-[var(--color-accent)] sm:block -ml-2 scale-x-[-1]"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -136,35 +136,35 @@ export const Testimonials = ({ data }: TestimonialsProps) => {
 
             {/* Elegant Quotation Mark Divider */}
             <div className="mb-3 flex items-center justify-center gap-4">
-              <span className="h-[1px] w-16 bg-[#c59b6d]/60 sm:w-28" />
-              <span className="font-serif text-3xl font-bold leading-none text-[#c59b6d] sm:text-4xl">
+              <span className="h-[1px] w-16 bg-[var(--color-accent)]/60 sm:w-28" />
+              <span className="font-serif text-3xl font-bold leading-none text-[var(--color-accent)] sm:text-4xl">
                 “
               </span>
-              <span className="h-[1px] w-16 bg-[#c59b6d]/60 sm:w-28" />
+              <span className="h-[1px] w-16 bg-[var(--color-accent)]/60 sm:w-28" />
             </div>
 
             {/* Testimonial Quote: Fixed-height container to prevent layout shifts */}
             <div className="flex min-h-[90px] items-center justify-center sm:min-h-[105px]">
-              <blockquote className="max-w-2xl font-serif text-lg font-normal italic leading-relaxed text-[#594742] sm:text-xl md:text-[21px]">
+              <blockquote className="max-w-2xl font-serif text-lg font-normal italic leading-relaxed text-[var(--color-text)] sm:text-xl md:text-[21px]">
                 &ldquo;{activeTestimonial.quote}&rdquo;
               </blockquote>
             </div>
 
             {/* Client Name & Role Container */}
             <div className="mt-4 flex flex-col items-center">
-              <h3 className="font-serif text-xl font-medium text-[#8b3a2b] sm:text-2xl">
+              <h3 className="font-serif text-xl font-medium text-[var(--color-primary)] sm:text-2xl">
                 {activeTestimonial.name}
               </h3>
 
-              <p className="mt-1 text-xs font-bold tracking-[0.25em] text-[#2c1a16] uppercase">
+              <p className="mt-1 text-xs font-bold tracking-[0.25em] text-[var(--color-heading)] uppercase">
                 {activeTestimonial.role}
               </p>
 
               {/* Bottom Diamond Ornament */}
               <div className="mt-3 flex items-center justify-center gap-3">
-                <span className="h-[1px] w-10 bg-[#c59b6d]/60" />
-                <span className="h-1.5 w-1.5 rotate-45 border border-[#c59b6d] bg-[#c59b6d]" />
-                <span className="h-[1px] w-10 bg-[#c59b6d]/60" />
+                <span className="h-[1px] w-10 bg-[var(--color-accent)]/60" />
+                <span className="h-1.5 w-1.5 rotate-45 border border-[var(--color-accent)] bg-[var(--color-accent)]" />
+                <span className="h-[1px] w-10 bg-[var(--color-accent)]/60" />
               </div>
             </div>
           </div>
@@ -174,11 +174,11 @@ export const Testimonials = ({ data }: TestimonialsProps) => {
             type="button"
             onClick={handleNext}
             aria-label="Next testimonial"
-            className="group z-10 flex h-14 w-14 shrink-0 items-center justify-center text-[#c59b6d] transition-all hover:text-[#8b3a2b]"
+            className="group z-10 flex h-11 w-11 shrink-0 items-center justify-center text-[var(--color-accent)] transition-all hover:text-[var(--color-primary)] sm:h-14 sm:w-14"
           >
-            <div className="flex items-center gap-1">
-              <span className="block h-[1.5px] w-8 bg-current transition-all group-hover:w-10" />
-              <FaArrowRight className="-mr-8 text-sm" />
+            <div className="flex items-center">
+              <FaArrowRight className="text-sm sm:-mr-6" />
+              <span className="hidden h-[1.5px] w-6 bg-current transition-all group-hover:w-8 sm:block" />
             </div>
           </button>
         </div>

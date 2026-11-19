@@ -32,8 +32,8 @@ export default function RootLayout({
   const commonData = templateData.common;
 
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${poppins.variable} font-sans antialiased`}>
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
+      <body className={`${poppins.variable} font-sans antialiased overflow-x-hidden w-full relative`}>
         <Header data={sectionData.Header?.variants?.EventManagementHeader2} />
         {children}
         <Footer data={commonData.Footer} />
